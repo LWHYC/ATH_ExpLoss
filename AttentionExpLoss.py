@@ -5,7 +5,7 @@ import torch.nn as nn
 import torch
 
 class AttentionExpDiceLoss(nn.Module):
-    def __init__(self, n_class, alpha, gama=0.1):
+    def __init__(self, n_class, alpha=0.5, gama=0.1):
         super(AttentionExpDiceLoss, self).__init__()
         self.one_hot_encoder = One_Hot(n_class).forward
         self.n_class = n_class
